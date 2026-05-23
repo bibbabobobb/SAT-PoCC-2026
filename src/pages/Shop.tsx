@@ -1,16 +1,13 @@
 import { useEffect, useState } from "react";
-function Job(){
+function Shop(){
     const [data, setData] = useState(null);
-    const API_KEY = "20f2d6abcd078d8614fad7334f584100db78ca9628437bc941437b295aadcc28"
-    const ENDPOINT = "https://serpapi.com/search?engine=google_jobs";
+    const API_KEY = "1783c36aeeda221e820b059e33dddae77e2c29fe96b90b7fccca9c563e711177"
+    const ENDPOINT = "https://serpapi.com/search";
 
     const params = {
-        engine: "google_jobs",
-        q: "Engineer",
+        engine: "google_shopping",
+        q: "Samsung Galaxy S26 Ultra",
         location: "Indonesia",
-        google_domain: "google.com",
-        hl: "en",
-        gl: "id",
         api_key: API_KEY,
     }
 
@@ -33,12 +30,15 @@ function Job(){
 
     return (
         <div>
+            {data.thumbnail && (
+                <img src={data.thumbnail} width="400" height="400" />
+            )}
             <h2>{data.title}</h2>
-            <img src={data.thumbnail} width="400" height="400" />
-            <p>{data.company_name}</p>
-            <p>{data.location}</p>
-            <p>{data.description}</p>
+            <p>{data.source}</p>
+            <p>{data.price}</p>
+            <p>{data.rating}</p>
+            <p>{data.product_link}</p>
         </div>
     )
 }
-export default Job;
+export default Shop;
