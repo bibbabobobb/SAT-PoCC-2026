@@ -1,5 +1,5 @@
-import Job from "./pages/Job"
+import Shop from "./pages/Shop"
 function App() {
-  return <Job/>
+  return <Shop/>
 }
 export default App;
