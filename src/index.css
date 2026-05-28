@@ -1,35 +1,58 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
 *, *::before, *::after {
   box-sizing: border-box;
-  margin: 10px;
+  margin: 0;
   padding: 0;
 }
 
-div {
+.wrap {
+  padding: 2rem;
   margin: 0 auto;
-  max-width: 1200px;
+  max-width: 1500px;
 }
 
 body {
-  background-color: #31356c;
-  color: #333333;
+  background-color: #111111;
+  color: #e0e0e0;
   font-family: 'Poppins', sans-serif;
   font-size: 20px;
   line-height: 1.6;
   padding: 2rem;
   -webkit-font-smoothing: antialiased;
 }
+
+.loading {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
  
 h1, h2, h3 {
   font-family: 'Poppins', sans-serif;
   font-weight: 800;
   letter-spacing: -0.02em;
-  color: #f0f0ff;
+  color: #ffffff;
 }
- 
+
+.header {
+  margin-bottom: 2rem;
+}
+
+.header h1 {
+  font-size: 3rem;
+  white-space: normal;
+  color: #ffffff;
+}
+
+.header p {
+  color: #888888;
+  font-size: 1rem;
+}
+
 h1 {
-  color:#eae7fb;
-  font-size: 60px;
+  color: #f0f0f0;
+  font-size: 30px;
   margin-bottom: 0.5rem;
   line-height: 1.2;
   white-space: nowrap;
@@ -39,20 +62,19 @@ h1 {
 }
 
 h2 {
-  color: #b979eb;
-  font-size: 30px;
+  color: #888888;
+  font-size: 20px;
   margin-bottom: 0.5rem;
   line-height: 1.2;
   text-transform: uppercase;
 }
-
 
 img {
   max-width: 480px;
   width: 100%;
   height: auto;
   border-radius: 30px;
-  border: 6px solid #1a1249;
+  border: 6px solid #222222;
   display: block;
   margin-bottom: 1.5rem;
   margin: 0 auto 1.5rem;
@@ -60,19 +82,22 @@ img {
 }
  
 p {
-  color: #b1b1da;
+  color: #999999;
+  font-size: 16px;
   margin-bottom: 0.1rem;
   line-height: 1.1;
 }
  
 a {
-  color: #bf00ff;
+  color: #ffffff;
+  font-size: 16px;
+  font-weight: 500;
   word-break: break-all;
 }
 
 button {
-  background: #d3a0fb;
-  color: #510a87;
+  background: #ffffff;
+  color: #111111;
   border: none;
   padding: 0.75rem 2rem;
   font-family: 'Poppins', sans-serif;
@@ -86,15 +111,24 @@ button {
   display: block;
 }
 
-.product {
-  border-bottom: 1px solid #2a2a3a;
-  padding-bottom: 1.5rem;
-  margin-bottom: 1.5rem;
-  transition: background 0.2s;
-  border-radius: 8px;
+button:hover {
+  opacity: 0.8;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 1.5rem;
+}
+
+.grid > div {
+  background: #1a1a1a;
+  border-radius: 16px;
   padding: 1rem;
 }
 
-.product:hover {
-  background: #1a1a26;
+.grid > div:hover {
+  background: #222222;
+  scale: 1.02;
+  transition: all 0.2s ease-in-out;
 }
