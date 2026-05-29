@@ -4,7 +4,7 @@ export default async function handler(req, res) {
     q: "Samsung Galaxy S26",
     location: "Indonesia",
     gl: "id",
-    api_key: API_KEY,
+    api_key: process.env.SERPAPI_KEY,
   });
 
   const response = await fetch(`https://serpapi.com/search?${params}`);
